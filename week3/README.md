@@ -34,8 +34,8 @@ When you finish the installation, type 'exit' to exit from the interactive sessi
 ```bash
 module load gcc/11.3.0
 module load git
-git clone https://github.com/uschpc/Building-NeuralNetworks.git
-cd Building-NeuralNetworks
+git clone https://github.com/uschpc/ITP450-DataScience-Fall2024.git
+cd week3
 ```
 
 
