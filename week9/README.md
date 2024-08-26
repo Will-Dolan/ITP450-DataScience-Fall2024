@@ -80,21 +80,14 @@ $ salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:0
 $ conda activate torch-env
 ```
 
-## Step 2: Download data and Run the Script
+## Step 2: Run the Script
 
 First, inspect the script ([see script](mnist_classify.py)) by running these commands:
 
 ```bash
-(torch-env) $ cd multi_gpu_training/02_pytorch_ddp
+(torch-env) $ cd ITP450-DataScience-Fall2024/week9
 (torch-env) $ cat simple_ddp.py
 ```
-
-Next, download the data on the compute node:
-
-```
-(torch-env) $ python download_data.py
-```
-After download is completed, type 'exit' to exit from the compute node and return to the login node. 
 
 Below is the Slurm script:
 
