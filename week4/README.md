@@ -1,4 +1,4 @@
-# CARC Workshop on Running Deep Learning Applications
+# ITP 450 Week4 Convolutional Neural Networks
 
 ### About
 The material in this repo covers how to run deep learning applications in HPC system. 
