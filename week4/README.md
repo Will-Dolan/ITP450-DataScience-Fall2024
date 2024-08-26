@@ -1,7 +1,7 @@
 # CARC Workshop on Running Deep Learning Applications
 
 ### About
-The material in this repo contains workshop materials related to running deep learning applications in HPC system. 
+The material in this repo covers how to run deep learning applications in HPC system. 
 
 # Single-GPU Training
 
