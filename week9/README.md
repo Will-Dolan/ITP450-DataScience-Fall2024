@@ -191,8 +191,8 @@ In the script above, `MASTER_PORT`, `MASTER_ADDR` and `WORLD_SIZE` are set. The 
 You can run the simple DPP script with:
 
 ```bash
-$ cd multi_gpu_training/02_pytorch_ddp
-$ sbatch --reservation=multigpu simple.slurm
+$ cd ITP450-DataScience-Fall2024/week9
+$ sbatch simple.slurm
 ```
 
 Take a look at the output. Does it all make sense?
