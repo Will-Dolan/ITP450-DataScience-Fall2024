@@ -400,9 +400,9 @@ def main():
         transforms.ToTensor(),
         transforms.Normalize((0.1307,), (0.3081,))
         ])
-    dataset1 = datasets.MNIST('data', train=True, download=False,
+    dataset1 = datasets.MNIST('data', train=True, download=True,
                        transform=transform)
-    dataset2 = datasets.MNIST('data', train=False, download=False,
+    dataset2 = datasets.MNIST('data', train=False, download=True,
                        transform=transform)
  
     world_size    = int(os.environ["WORLD_SIZE"])
