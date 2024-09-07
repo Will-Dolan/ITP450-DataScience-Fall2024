@@ -13,7 +13,7 @@ salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 
 
 If the reservation is not available, please use the following command to request an interactive session: 
 ```bash
-salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 --account=irahbari_1147 --reservation=ipt-450-tu
+salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 --account=irahbari_1147
 ```
 
 ```
