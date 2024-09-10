@@ -36,8 +36,8 @@ When you finish the installtion, type 'exit' to exit from the interactive sessio
 ```bash
 module load gcc/11.3.0
 module load git
-git clone https://github.com/uschpc/Running-DL-Applications.git
-cd Running-DL-Applications
+git clone https://github.com/uschpc/ITP450-DataScience-Fall2024.git
+cd week4
 ```
 
 
