@@ -38,7 +38,7 @@ Follow the link to CARC Jupyter Kernel documentation: https://www.carc.usc.edu/u
 mamba install -c conda-forge ipykernel   # This will install ipykernel inside your Conda environment
 python -m ipykernel install --user --name torch-env --display-name "torch-env"     #This will link your Conda environment to OpenonDemand Jupyter Notebook Kernel
 exit 
-```
+```bash
 When you finish the installation, type 'exit' to exit from the interactive session.
 ```bash
 module load gcc/11.3.0
