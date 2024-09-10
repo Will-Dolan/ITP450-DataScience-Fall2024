@@ -33,13 +33,12 @@ mamba install line_profiler --channel conda-forge   #optional, needed if you wan
 ```
 
 ### Install Jupyter Kernel
-Follow the link to CARC Jupyter Kernel documentation: https://www.carc.usc.edu/user-guides/hpc-systems/software/jupyter-kernels and Look for the 'Conda' Section to install Jupyter Kernel: 
+Follow the link to CARC Jupyter Kernel documentation: https://www.carc.usc.edu/user-guides/hpc-systems/software/jupyter-kernels and Look for the 'Conda' Section to install Jupyter Kernel. When you finish the installation, type 'exit' to exit from the interactive session.
 ```
 mamba install -c conda-forge ipykernel   # This will install ipykernel inside your Conda environment
 python -m ipykernel install --user --name torch-env --display-name "torch-env"     #This will link your Conda environment to OpenonDemand Jupyter Notebook Kernel
 exit 
 ```
-When you finish the installation, type 'exit' to exit from the interactive session.
 ```
 module load gcc/11.3.0
 module load git
