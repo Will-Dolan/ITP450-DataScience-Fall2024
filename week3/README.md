@@ -40,7 +40,7 @@ python -m ipykernel install --user --name torch-env --display-name "torch-env"  
 exit 
 ```bash
 When you finish the installation, type 'exit' to exit from the interactive session.
-```bash
+```
 module load gcc/11.3.0
 module load git
 cd /scratch1/<user_name>
