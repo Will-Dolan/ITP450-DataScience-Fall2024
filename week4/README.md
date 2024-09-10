@@ -91,6 +91,7 @@ eval "$(conda shell.bash hook)"
 conda activate torch-env
 
 kernprof -o ${SLURM_JOBID}.lprof -l mnist_classify.py --epochs=3
+#if you just want to run your python script, you can use: python mnist_classify.py --epochs=3
 ```
 
 `kernprof` is a profiler that wraps Python. 
