@@ -45,7 +45,7 @@ module load gcc/11.3.0
 module load git
 cd /scratch1/<user_name>
 git clone https://github.com/uschpc/ITP450-DataScience-Fall2024.git
-cd week3
+cd ITP450-DataScience-Fall2024/week3
 ```
 
 
