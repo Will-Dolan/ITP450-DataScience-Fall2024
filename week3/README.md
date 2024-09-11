@@ -54,7 +54,7 @@ module load git
 ```
 change your working direcotry to your scratch directory:
 ```
-cd /scratch1/<user_name>
+cd /scratch1/$(whoami)
 ```
 ```
 git clone https://github.com/uschpc/ITP450-DataScience-Fall2024.git
