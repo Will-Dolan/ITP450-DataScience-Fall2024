@@ -39,8 +39,8 @@ A Jupyter kernel is a computational engine that executes the code contained in J
 
 For example:
 
-	•	If you’re working in a Python notebook, it will be connected to a Python kernel, allowing Python code execution.
-	•	Similarly, Jupyter supports kernels for other languages, such as R, Julia, and MATLAB.
+If you’re working in a Python notebook, it will be connected to a Python kernel, allowing Python code execution.
+Similarly, Jupyter supports kernels for other languages, such as R, Julia, and MATLAB.
 
 The kernel manages the state of the notebook (such as variables, imports, and output), allowing you to run cells independently while maintaining continuity across the notebook. You can select or switch kernels from within the Jupyter interface.
 ```
