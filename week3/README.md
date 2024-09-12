@@ -27,9 +27,9 @@ module purge
 ```
 Note: 
 
-'mamba init bash':  This command initializes Mamba (a fast package manager) for the Bash shell. It modifies the shell configuration to include Mamba so that you can use it directly in your terminal.
+**'mamba init bash'**:  This command initializes Mamba (a fast package manager) for the Bash shell. It modifies the shell configuration to include Mamba so that you can use it directly in your terminal.
 
-'source ~/.bashrc':  This command reloads your shell configuration by sourcing the .bashrc file. It ensures that the changes made by 'mamba init bash' take effect immediately without needing to restart the terminal.
+**'source ~/.bashrc'**:  This command reloads your shell configuration by sourcing the .bashrc file. It ensures that the changes made by 'mamba init bash' take effect immediately without needing to restart the terminal.
 
 ```
 mamba create --name torch-env
@@ -39,7 +39,8 @@ mamba install line_profiler --channel conda-forge   #optional, needed if you wan
 ```
 
 Note: 
-'line_profiler' is a Python module used for profiling (measuring the execution time) of individual lines in a script, helping with performance optimization.
+
+**'line_profiler'** is a Python module used for profiling (measuring the execution time) of individual lines in a script, helping with performance optimization.
 
 
 ### Install Jupyter Kernel
