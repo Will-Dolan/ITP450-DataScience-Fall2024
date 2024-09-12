@@ -21,10 +21,12 @@ salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 
 ```
 module purge
 module load conda
-mamba init bash # This command initializes Mamba (a fast package manager) for the Bash shell. It modifies the shell configuration to include Mamba so that you can use it directly in your terminal.
-source ~/.bashrc # This command reloads your shell configuration by sourcing the .bashrc file. It ensures that the changes made by 'mamba init bash' take effect immediately without needing to restart the terminal.
+mamba init bash 
+source ~/.bashrc 
 module purge
 ```
+'mamba init bash':  This command initializes Mamba (a fast package manager) for the Bash shell. It modifies the shell configuration to include Mamba so that you can use it directly in your terminal.
+'source ~/.bashrc':  This command reloads your shell configuration by sourcing the .bashrc file. It ensures that the changes made by 'mamba init bash' take effect immediately without needing to restart the terminal.
 ```
 mamba create --name torch-env
 mamba activate torch-env
