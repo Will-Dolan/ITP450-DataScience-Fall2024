@@ -38,6 +38,10 @@ mamba install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 mamba install line_profiler --channel conda-forge   #optional, needed if you want to use line_profiler function within your code
 ```
 
+Note: 
+'line_profiler' is a Python module used for profiling (measuring the execution time) of individual lines in a script, helping with performance optimization.
+
+
 ### Install Jupyter Kernel
 Follow the link to CARC Jupyter Kernel documentation: https://www.carc.usc.edu/user-guides/hpc-systems/software/jupyter-kernels and Look for the 'Conda' Section to install Jupyter Kernel. When you finish the installation, type 'exit' to exit from the interactive session.
 
