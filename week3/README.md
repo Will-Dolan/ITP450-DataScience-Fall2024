@@ -26,9 +26,11 @@ source ~/.bashrc
 module purge
 ```
 Note: 
-1 'mamba init bash':  This command initializes Mamba (a fast package manager) for the Bash shell. It modifies the shell configuration to include Mamba so that you can use it directly in your terminal.
 
-2 'source ~/.bashrc':  This command reloads your shell configuration by sourcing the .bashrc file. It ensures that the changes made by 'mamba init bash' take effect immediately without needing to restart the terminal.
+'mamba init bash':  This command initializes Mamba (a fast package manager) for the Bash shell. It modifies the shell configuration to include Mamba so that you can use it directly in your terminal.
+
+'source ~/.bashrc':  This command reloads your shell configuration by sourcing the .bashrc file. It ensures that the changes made by 'mamba init bash' take effect immediately without needing to restart the terminal.
+
 ```
 mamba create --name torch-env
 mamba activate torch-env
