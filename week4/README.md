@@ -14,9 +14,17 @@ Here we train a CNN on the MNIST dataset using a single GPU as an example. We pr
 First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. 
 
 We will use Conda to build software packages. If it is the first time you are using Conda, make sure you follow the guide of how to use Conda with this link: https://www.carc.usc.edu/user-guides/data-science/building-conda-environment
+
+We need to request an interactive session:
 ```bash
-salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00   #Request an interative session to install packages within Conda environment.
+salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 --account=irahbari_1147 --reservation=itp-450-tu
 ```
+
+If the reservation is not available, please use the following command to request an interactive session: 
+```bash
+salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 --account=irahbari_1147
+```
+
 ```
 module purge
 module load conda
