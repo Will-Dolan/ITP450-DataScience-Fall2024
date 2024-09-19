@@ -185,6 +185,12 @@ One technique that was discussed in the [Performance Tuning Guide](https://pytor
 
 *Credit for image above is [here](https://www.telesens.co/2019/04/04/distributed-data-parallel-training-using-pytorch-on-aws/).*
 
+1.	Pageable: This means that the memory can be paged in and out of physical memory to and from disk storage. In other words, the operating system can move this data between the main memory (RAM) and disk storage (swap space or page file) as needed. This is typically done to free up physical memory for other processes or tasks.
+
+2.	Pinned: This means that the memory is locked into physical RAM and cannot be paged out to disk. Pinned memory stays in physical memory for as long as it is needed and is not subject to the operating system’s paging mechanism. This is often used in situations where data must remain in memory for performance reasons, such as in real-time applications or certain kinds of device drivers.
+
+So, “pageable to pinned” refers to the process of taking memory that was initially pageable (able to be swapped in and out) and converting it to pinned memory (locked into RAM). This might be done to ensure that certain critical data remains in memory and is accessed quickly without the risk of being paged out to disk.
+
 In `mnist_classify.py`, change `num_workers` from 1 to 8. And then in `job.slurm` change `--cpus-per-task` from 1 to 8. Then run the script again and note the speed-up:
 
 ```
