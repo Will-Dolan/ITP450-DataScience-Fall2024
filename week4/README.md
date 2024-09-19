@@ -49,7 +49,7 @@ cd /scratch1/$(whoami)
 rm -rf ITP450-DataScience-Fall2024
 git clone https://github.com/uschpc/ITP450-DataScience-Fall2024.git
 cd ITP450-DataScience-Fall2024/week4
-git pull
+#git pull
 ```
 
 
