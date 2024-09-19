@@ -9,6 +9,7 @@
 #SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
 #SBATCH --account=irahbari_1147
 ##SBATCH --reservation=itp-450-th
+#SBATCH test
 
 
 # which gpu node was used
