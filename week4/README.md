@@ -140,6 +140,7 @@ You can also check `slurm-#######.out` file.
 We installed line_profiler into the Conda environment and profiled the code. To analyze the profiling data:
 
 ```
+$ conda activate torch-env
 $ python -m line_profiler -rmt *.lprof 
 Timer unit: 1e-06 s
 
