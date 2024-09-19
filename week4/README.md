@@ -46,6 +46,7 @@ When you finish the installtion, type 'exit' to exit from the interactive sessio
 module load gcc/11.3.0
 module load git
 cd /scratch1/$(whoami)
+rm -rf ITP450-DataScience-Fall2024
 git clone https://github.com/uschpc/ITP450-DataScience-Fall2024.git
 cd ITP450-DataScience-Fall2024/week4
 git pull
