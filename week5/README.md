@@ -43,7 +43,10 @@ Some key features of Tensorboard include:
 ## Setup Tensorboard
 
 Launch ‘Terminal’ Apps in OpenOnDemand :
-
+Change your working directory to week 5: 
+```
+cd /scratch1/$(whoami)/ITP450-DataScience-Fall2024/week5
+```
 Activate your Conda environment: 
 ```
 conda activate torch-env
