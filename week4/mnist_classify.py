@@ -10,32 +10,81 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
 
-
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(1, 32, 3, 1)
-        self.conv2 = nn.Conv2d(32, 64, 3, 1)
-        self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(9216, 128)
-        self.fc2 = nn.Linear(128, 10)
+        # First convolutional layer:
+        # - Input channels: 1 (e.g., grayscale images)
+        # - Output channels: 32
+        # - Kernel size: 3x3
+        # - Stride: 1
+        self.conv1 = nn.Conv2d(in_channels=1, out_channels=32, kernel_size=3, stride=1)
+        
+        # Second convolutional layer:
+        # - Input channels: 32 (from conv1)
+        # - Output channels: 64
+        # - Kernel size: 3x3
+        # - Stride: 1
+        self.conv2 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, stride=1)
+        
+        # First dropout layer:
+        # - Dropout probability: 25%
+        # - Helps prevent overfitting by randomly zeroing some of the elements of the input tensor
+        self.dropout1 = nn.Dropout(p=0.25)
+        
+        # Second dropout layer:
+        # - Dropout probability: 50%
+        # - Further regularizes the model during training
+        self.dropout2 = nn.Dropout(p=0.5)
+        
+        # First fully connected (linear) layer:
+        # - Input features: 9216
+        #   (Assuming input image size is 28x28, after two conv layers and pooling)
+        # - Output features: 128
+        self.fc1 = nn.Linear(in_features=9216, out_features=128)
+        
+        # Second fully connected (linear) layer:
+        # - Input features: 128
+        # - Output features: 10 (e.g., number of classes for classification)
+        self.fc2 = nn.Linear(in_features=128, out_features=10)
 
     def forward(self, x):
+        # Pass input through the first convolutional layer
         x = self.conv1(x)
+        # Apply ReLU activation function
         x = F.relu(x)
+        
+        # Pass the result through the second convolutional layer
         x = self.conv2(x)
+        # Apply ReLU activation function
         x = F.relu(x)
-        x = F.max_pool2d(x, 2)
+        
+        # Apply 2D max pooling with a kernel size of 2
+        # This reduces the spatial dimensions by a factor of 2
+        x = F.max_pool2d(x, kernel_size=2)
+        
+        # Apply the first dropout layer
         x = self.dropout1(x)
+        
+        # Flatten the tensor starting from the first dimension (excluding batch size)
+        # This prepares the data for the fully connected layers
         x = torch.flatten(x, 1)
+        
+        # Pass through the first fully connected layer
         x = self.fc1(x)
+        # Apply ReLU activation function
         x = F.relu(x)
+        
+        # Apply the second dropout layer
         x = self.dropout2(x)
+        
+        # Pass through the second fully connected layer
         x = self.fc2(x)
+        
+        # Apply log softmax activation function to obtain log probabilities for each class
         output = F.log_softmax(x, dim=1)
+        
         return output
-
 
 def train(args, model, device, train_loader, optimizer, epoch):
     model.train()
