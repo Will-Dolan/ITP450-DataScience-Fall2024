@@ -141,7 +141,7 @@ We installed line_profiler into the Conda environment and profiled the code. To 
 
 ```
 $ conda activate torch-env
-$ python -m line_profiler -rmt *.lprof 
+$ python -m line_profiler -rmt *.lprof (this works only if you have one lprof file. Otherwise, try to specify your exact file name, e.g. 27805042.lprof)
 Timer unit: 1e-06 s
 
 Total time: 30.8937 s
