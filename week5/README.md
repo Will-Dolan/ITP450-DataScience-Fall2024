@@ -40,4 +40,22 @@ Some key features of Tensorboard include:
 
 3 Visualizing your model graphs
 
+## Setup Tensorboard
+
+Launch ‘Terminal’ Apps in OpenOnDemand :
+
+Activate your Conda environment: 
+```
+conda activate torch-env
+```
+
+Launch Tensorboard in your Conda environment: 
+```
+tensorboard --logdir=runs
+```
+
+Right Click on the http://localhost:6006/ link and select ‘Open link’, this will launch a browser and start Tensorboard
+
+
+
 
