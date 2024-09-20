@@ -5,7 +5,7 @@ Tranfer Learning PyTorch Tutorial Link: https://pytorch.org/tutorials/beginner/t
 Tensorboard Tutorial Link: https://pytorch.org/tutorials/beginner/introyt/introyt1_tutorial.html
 
 
-## Step 1: Software Environment Setup
+## Software Environment Setup
 
 First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. 
 
@@ -27,5 +27,17 @@ To install Tensorboard:
 mamba activate torch-env
 mamba install matplotlib tensorboard
 ```
+
+## Tensorboard
+
+TensorBoard is a powerful visualization tool. It provides developers and researchers with insights into their machine learning models by allowing them to visualize metrics, model graphs, and other key aspects of their workflows. Whether you’re debugging a model, tuning hyperparameters, or simply seeking a better understanding of your training process, TensorBoard offers a suite of features to facilitate these tasks.
+
+Some key features of Tensorboard include: 
+
+1 Showing images in TensorBoard
+
+2 Graphing scalers and metrics to visualize training
+
+3 Visualizing your model graphs
 
 
