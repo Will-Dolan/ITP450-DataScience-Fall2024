@@ -146,7 +146,7 @@ Timer unit: 1e-06 s
 
 Total time: 30.8937 s
 File: mnist_classify.py
-Function: train at line 39
+Function: train at line 89
 
 Line #      Hits         Time  Per Hit   % Time  Line Contents
 ==============================================================
