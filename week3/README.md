@@ -43,7 +43,7 @@ Test PyTorch & line_profiler is property installed:
 (torch-env) $ python
 >> import torch
 >> import line_profiler
->>  
+>> exit()
 ```
 
 Note: 
