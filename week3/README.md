@@ -38,6 +38,14 @@ mamba install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 mamba install line_profiler --channel conda-forge   
 ```
 
+Test PyTorch & line_profiler is property installed: 
+```
+(torch-env) $ python
+>> import torch
+>> import line_profiler
+>>  
+```
+
 Note: 
 
 **'line_profiler'** is a Python module used for profiling (measuring the execution time) of individual lines in a script, helping with performance optimization.
