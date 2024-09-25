@@ -50,7 +50,7 @@ Develop and train a convolutional neural network (CNN) in PyTorch to classify im
 
 ## Tasks:
 
-* Implement the network using PyTorch’s frameworks. (You only need to modify the class Net(nn.Module) section within mnist_classify.py and do not change the loss function output = F.log_softmax(x, dim=1))
+* Implement the network using PyTorch’s frameworks. (You only need to modify the class Net(nn.Module) section within mnist_classify.py in week 4 and do not change the loss function output = F.log_softmax(x, dim=1))
 
   An example of convolutional neural networks with padding
 ```
