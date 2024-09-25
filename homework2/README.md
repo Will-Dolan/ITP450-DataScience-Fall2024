@@ -70,7 +70,7 @@ Remember to change your slurm script so that cpus-per-task = 8 instead of cpus-p
 * Python code for the entire training pipeline: mnist_classify.py and your slurm script used for job submission. (Either with number_workers=1 or 8, but slurm job script needs to be consistent with your mnist_calssify.py) 
 * Results of line profiler with different number of workers and your analysis of the results. (See github repo step 3 for sampled results from line_profiler).  (pdf format) 
 
-Here is the reference code from week3 class excercise: 
+Here is the reference code from week4 class excercise: 
 ```
 class Net(nn.Module):
     def __init__(self):
