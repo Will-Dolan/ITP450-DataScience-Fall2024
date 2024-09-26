@@ -72,12 +72,11 @@ train_loader  = torch.utils.data.DataLoader(dataset1,
 
 ## Step 1: Activate the Environment
 
-For simplicity we will use a pre-installed Conda environmnet. Run these commands to activate the environment:
+First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. For simplicity we will use a pre-installed Conda environmnet. Run these commands to activate the environment:
 
 ```bash
-$ ssh <YourNetID>@discovery.usc.edu
-$ salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 
-$ conda activate torch-env
+salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 
+conda activate torch-env
 ```
 
 ## Step 2: Run the Script
