@@ -92,7 +92,7 @@ conda activate torch-env
 First, inspect the script ([see script](mnist_classify.py)) by running these commands:
 
 ```bash
-(torch-env) $ cd ITP450-DataScience-Fall2024/week9
+(torch-env) $ cd /scratch1/$(whoami)/ITP450-DataScience-Fall2024/week9
 (torch-env) $ cat simple_ddp.py
 ```
 
