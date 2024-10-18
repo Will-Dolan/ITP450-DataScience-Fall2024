@@ -31,7 +31,7 @@ A Slurm job script is a special type of Bash shell script that the Slurm job sch
 #SBATCH --account=irahbari_1147
 #SBATCH --partition=gpu
 #SBATCH --nodes=2
-#SBATCH --ntasks-per-node=16
+#SBATCH --ntasks-per-node=2
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --gpus-per-task=1
@@ -62,11 +62,11 @@ Each line is described below:
 | `#!/bin/bash` | Use Bash to execute this script |
 | `#SBATCH` | Syntax that allows Slurm to read your requests (ignored by Bash) |
 | `--account=<project_id>` | Charge compute time to <project_id>; enter `myaccount` to view your available project IDs |
-| `--partition=main` | Submit job to the main partition |
+| `--partition=gpu` | Submit job to the gpu partition |
 | `--nodes=2` | Use 2 compute nodes |
-| `--ntasks-per-node=16` | Run 16 tasks per node |
-| `--cpus-per-task=1` | Reserve 1 CPU per task for your exclusive use |
-| `--mem=0` | Reserve all memory on a node for your exclusive use |
+| `--ntasks-per-node=2` | Run 2 tasks per node |
+| `--cpus-per-task=8` | Reserve 8 CPUs per task for your exclusive use |
+| `--mem=32G` | Reserve 32GB memory on a node for your  use |
 | `--time=1:00:00` | Reserve resources described for 1 hour |
 | `module purge` | Clear [environment modules](/user-guides/hpc-systems/software/software-modules-lmod) |
 | `module load launcher` | Load the `launcher` [environment module](/user-guides/hpc-systems/software/software-modules-lmod) |
@@ -79,6 +79,8 @@ Each line is described below:
 | `export LAUNCHER_BIND=1` | Bind tasks to cores using `hwloc` |
 | `export LAUNCHER_WORKDIR=$PWD` | Set working directory for job |
 | `export LAUNCHER_JOB_FILE=simulations.txt` | Specify launcher job file to use |
+| `eval "$(conda shell.bash hook)"` | Setup Conda |
+| `conda activate torch-env` | Launch jobs |
 | `$LAUNCHER_DIR/paramrun` | Launch jobs |
 
 Adjust the resources requested based on your needs, keeping in mind that fewer resources requested leads to less queue time for your job.
