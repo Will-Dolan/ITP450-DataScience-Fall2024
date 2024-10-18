@@ -52,6 +52,7 @@ export LAUNCHER_JOB_FILE=simulations.txt
 
 eval "$(conda shell.bash hook)"
 conda activate torch-env
+
 $LAUNCHER_DIR/paramrun
 ```
 
