@@ -89,9 +89,16 @@ Adjust the resources requested based on your needs, keeping in mind that fewer r
 In this example, the file `simulations.txt` may contain many lines like the following:
 
 ```
-./sim 3 4 5 >& job-$LAUNCHER_JID.log
-./sim 6 4 7 >& job-$LAUNCHER_JID.log
-./sim 1 9 2 >& job-$LAUNCHER_JID.log
+srun mnist_classify.py --epochs=1
+srun mnist_classify.py --epochs=2
+srun mnist_classify.py --epochs=3
+srun mnist_classify.py --epochs=4
+srun mnist_classify.py --epochs=5
+srun mnist_classify.py --epochs=6
+srun mnist_classify.py --epochs=7
+srun mnist_classify.py --epochs=8
+srun mnist_classify.py --epochs=9
+srun mnist_classify.py --epochs=10
 ```
 
 The same simulation program `sim` is being run but with varying parameter values for each run.
