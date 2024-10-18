@@ -80,7 +80,7 @@ Each line is described below:
 | `export LAUNCHER_WORKDIR=$PWD` | Set working directory for job |
 | `export LAUNCHER_JOB_FILE=simulations.txt` | Specify launcher job file to use |
 | `eval "$(conda shell.bash hook)"` | Setup Conda |
-| `conda activate torch-env` | Launch jobs |
+| `conda activate torch-env` | Activate Conda Environment |
 | `$LAUNCHER_DIR/paramrun` | Launch jobs |
 
 Adjust the resources requested based on your needs, keeping in mind that fewer resources requested leads to less queue time for your job.
