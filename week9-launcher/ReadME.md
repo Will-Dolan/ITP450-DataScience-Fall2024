@@ -1,9 +1,3 @@
----
-title: Using Launcher
-date: 2024-10-18
-sort-text: A08
----
-
 [Launcher](https://github.com/TACC/launcher) is a utility for performing many-task computing workflows on computing clusters. It is designed for running large collections of serial or multi-threaded applications within a single batch job. Launcher can be used as an alternative to Slurm job arrays and to pack many short-running jobs into one batch job.
 
 With Launcher, you can run a set of defined jobs within a single batch job, even when you have more jobs than the number of requested CPUs. The number of available CPUs determines the upper limit on the number of jobs that can be run at the same time. In addition, you can easily use multiple compute nodes to increase the number of available CPUs.
