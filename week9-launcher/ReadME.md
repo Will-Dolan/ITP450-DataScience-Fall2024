@@ -27,6 +27,7 @@ A Slurm job script is a special type of Bash shell script that the Slurm job sch
 ```
 #!/bin/bash
 
+#SBATCH --job-name=mnist_classify
 #SBATCH --account=irahbari_1147
 #SBATCH --partition=gpu
 #SBATCH --nodes=2
