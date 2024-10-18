@@ -89,16 +89,16 @@ Adjust the resources requested based on your needs, keeping in mind that fewer r
 In this example, the file `simulations.txt` may contain many lines like the following:
 
 ```
-python mnist_classify.py --epochs=1
-python mnist_classify.py --epochs=2
-python mnist_classify.py --epochs=3
-python mnist_classify.py --epochs=4
-python mnist_classify.py --epochs=5
-python mnist_classify.py --epochs=6
-python mnist_classify.py --epochs=7
-python mnist_classify.py --epochs=8
-python mnist_classify.py --epochs=9
-python mnist_classify.py --epochs=10
+python3 mnist_classify.py --epochs=1 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=2 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=3 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=4 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=5 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=6 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=7 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=8 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=9 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=10 >& job-$LAUNCHER_JID.log
 ```
 
 The same simulation program `mnist_classify` is being run but with varying parameter values for each run.
