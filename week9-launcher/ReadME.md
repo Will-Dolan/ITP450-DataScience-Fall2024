@@ -27,12 +27,13 @@ A Slurm job script is a special type of Bash shell script that the Slurm job sch
 ```
 #!/bin/bash
 
-#SBATCH --account=<project_id>
-#SBATCH --partition=main
+#SBATCH --account=irahbari_1147
+#SBATCH --partition=gpu
 #SBATCH --nodes=2
 #SBATCH --ntasks-per-node=16
-#SBATCH --cpus-per-task=1
-#SBATCH --mem=0
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32G
+#SBATCH --gpus-per-task=1
 #SBATCH --time=1:00:00
 
 module purge
@@ -48,6 +49,8 @@ export LAUNCHER_BIND=1
 export LAUNCHER_WORKDIR=$PWD
 export LAUNCHER_JOB_FILE=simulations.txt
 
+eval "$(conda shell.bash hook)"
+conda activate torch-env
 $LAUNCHER_DIR/paramrun
 ```
 
