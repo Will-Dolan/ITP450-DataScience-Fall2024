@@ -101,9 +101,9 @@ python mnist_classify.py --epochs=9
 python mnist_classify.py --epochs=10
 ```
 
-The same simulation program `sim` is being run but with varying parameter values for each run.
+The same simulation program `mnist_classify` is being run but with varying parameter values for each run.
 
-Launcher will schedule each line as a job on one of the tasks (CPUs) requested. In this serial example, there are 32 CPUs available across 2 compute nodes, so 32 jobs will run at one time until all jobs are completed.
+Launcher will schedule each line as a job on one of the tasks (CPUs) requested. In this serial example, there are 32 CPUs available across 2 compute nodes, cpus-per-task=8, so 4 jobs will run at one time until all jobs are completed.
 
 In this example, the output of each job is also saved to a unique log file. For example, the `job-1.log` file would contain the output for the first line in the file.
 
