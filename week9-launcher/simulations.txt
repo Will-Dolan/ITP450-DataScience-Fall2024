@@ -1,0 +1,11 @@
+python3 mnist_classify.py --epochs=3 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=4 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=5 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=6 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=7 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=8 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=9 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=10 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=11 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=12 >& job-$LAUNCHER_JID.log
+python3 mnist_classify.py --epochs=13 >& job-$LAUNCHER_JID.log
