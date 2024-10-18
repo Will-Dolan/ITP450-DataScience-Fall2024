@@ -89,16 +89,16 @@ Adjust the resources requested based on your needs, keeping in mind that fewer r
 In this example, the file `simulations.txt` may contain many lines like the following:
 
 ```
-srun mnist_classify.py --epochs=1
-srun mnist_classify.py --epochs=2
-srun mnist_classify.py --epochs=3
-srun mnist_classify.py --epochs=4
-srun mnist_classify.py --epochs=5
-srun mnist_classify.py --epochs=6
-srun mnist_classify.py --epochs=7
-srun mnist_classify.py --epochs=8
-srun mnist_classify.py --epochs=9
-srun mnist_classify.py --epochs=10
+python mnist_classify.py --epochs=1
+python mnist_classify.py --epochs=2
+python mnist_classify.py --epochs=3
+python mnist_classify.py --epochs=4
+python mnist_classify.py --epochs=5
+python mnist_classify.py --epochs=6
+python mnist_classify.py --epochs=7
+python mnist_classify.py --epochs=8
+python mnist_classify.py --epochs=9
+python mnist_classify.py --epochs=10
 ```
 
 The same simulation program `sim` is being run but with varying parameter values for each run.
