@@ -70,30 +70,17 @@ train_loader  = torch.utils.data.DataLoader(dataset1,
                                             pin_memory=True)
 ```
 
-## Step 1: Activate the Environment
+## Step 1: Login in to OnDemand
 
 First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Discovery Cluster Shell Access' within OpenOnDemand. 
-We need to request an interactive session:
-```
-salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 --account=irahbari_1147 --reservation=itp-450-tu
-```
-
-If the reservation is not available, please use the following command to request an interactive session: 
-```bash
-salloc --partition=gpu --gres=gpu:1 --cpus-per-task=8 --mem=32GB --time=1:00:00 --account=irahbari_1147
-```
-For simplicity we will use a pre-installed Conda environmnet. Run these commands to activate the environment:
-```
-conda activate torch-env
-```
 
 ## Step 2: Run the Script
 
 First, inspect the script ([see script](mnist_classify.py)) by running these commands:
 
 ```bash
-(torch-env) $ cd /scratch1/$(whoami)/ITP450-DataScience-Fall2024/week9
-(torch-env) $ cat simple_ddp.py
+$ cd /scratch1/$(whoami)/ITP450-DataScience-Fall2024/week9
+$ cat simple_ddp.py
 ```
 
 Below is the Slurm script:
