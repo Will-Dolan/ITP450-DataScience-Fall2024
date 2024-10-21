@@ -160,7 +160,7 @@ Below is a full Slurm script for using DDP for Della (GPU):
 #SBATCH --cpus-per-task=8        # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --mem=32G                # total memory per node (4 GB per cpu-core is default)
 #SBATCH --gres=gpu:2             # number of allocated gpus per node
-#SBATCH --time=00:01:00          # total run time limit (HH:MM:SS)
+#SBATCH --time=00:05:00          # total run time limit (HH:MM:SS)
 
 export MASTER_PORT=$'12355'
 export WORLD_SIZE=$(($SLURM_NNODES * $SLURM_NTASKS_PER_NODE))
