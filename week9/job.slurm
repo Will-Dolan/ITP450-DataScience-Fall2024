@@ -1,5 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=ddp-torch     # create a short name for your job
+#SBATCH --partition=gpu
 #SBATCH --nodes=2                # node count
 #SBATCH --ntasks-per-node=2      # total number of tasks per node
 #SBATCH --cpus-per-task=8        # cpu-cores per task (>1 if multi-threaded tasks)
