@@ -79,6 +79,9 @@ First login to CARC OnDemand: https://ondemand.carc.usc.edu/ and request a 'Disc
 First, inspect the script ([see script](mnist_classify.py)) by running these commands:
 
 ```bash
+$ cd /scratch1/$(whoami)
+$ rm -rf ITP450-DataScience-Fall2024
+$ git clone https://github.com/uschpc/ITP450-DataScience-Fall2024.git
 $ cd /scratch1/$(whoami)/ITP450-DataScience-Fall2024/week9
 $ cat simple_ddp.py
 ```
