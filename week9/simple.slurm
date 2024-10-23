@@ -22,4 +22,4 @@ eval "$(conda shell.bash hook)"
 
 conda activate torch-env
 
-srun python simple_dpp.py
+srun python simple_ddp.py
