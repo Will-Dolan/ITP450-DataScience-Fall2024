@@ -75,8 +75,9 @@ train_loader  = torch.utils.data.DataLoader(dataset1,
                                             pin_memory=True)
 ```
 Step 4:
-
+```
 dist.destroy_process_group()
+```
 
 ## Step 1: Login in to OnDemand
 
