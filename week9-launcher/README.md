@@ -18,8 +18,9 @@ Launcher is not a compiled program. Instead, it's a set of Bash and Python scrip
 
 In order to submit jobs to the Slurm job scheduler, you will need to use Launcher in batch mode. There are a few steps to follow:
 
-1. Create a launcher job file that contains jobs to run (one job per line)
-2. Create a Slurm job script that requests resources, configures Launcher, and runs the launcher job file
+
+1. Create a Slurm job script that requests resources, configures Launcher, and runs the launcher job file
+2. Create a launcher job file that contains jobs to run (one job per line)
 3. Submit the job script to the job scheduler using `sbatch`
 
 A Slurm job script is a special type of Bash shell script that the Slurm job scheduler recognizes as a job. For a job running Launcher, a Slurm job script should look something like the following:
