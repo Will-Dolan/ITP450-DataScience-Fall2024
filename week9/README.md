@@ -32,6 +32,7 @@ Do not use `DataParallel` in PyTorch for anything since it gives poor performanc
 
 This completely new piece is needed to form the process group:
 
+Step 1:
 ```python
 def setup(rank, world_size):
     # initialize the process group
@@ -40,6 +41,7 @@ def setup(rank, world_size):
 
 Note that `dist.init_process_group()` is blocking. That means the code waits until all processes have reached that line and the command is successfully executed before going on. One should prefer `nccl` over `gloo` as [described here](https://pytorch.org/docs/stable/distributed.html#initialization). The `rank` is the index of the process and `world_size` is the total number of processes. If you train a model using 4 GPUs then `world_size` is 4 and the `ranks` of the processes are 0, 1, 2, 3.
 
+Step2:
 For the single-GPU training:
 
 ```python
@@ -59,6 +61,7 @@ More on `local_rank` below. In short, this is the GPU index which ranges from `0
 
 One also needs to ensure that a different batch is processed by each GPU:
 
+Step 3:
 ```python
 train_sampler = torch.utils.data.distributed.DistributedSampler(dataset1,
                                                                 num_replicas=world_size,
