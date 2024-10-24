@@ -73,11 +73,10 @@ train_loader  = torch.utils.data.DataLoader(dataset1,
                                             sampler=train_sampler,
                                             num_workers=int(os.environ["SLURM_CPUS_PER_TASK"]),
                                             pin_memory=True)
-
+```
 Step 4:
 
 dist.destroy_process_group()
-```
 
 ## Step 1: Login in to OnDemand
 
