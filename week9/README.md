@@ -41,6 +41,10 @@ def setup(rank, world_size):
 
 Note that `dist.init_process_group()` is blocking. That means the code waits until all processes have reached that line and the command is successfully executed before going on. One should prefer `nccl` over `gloo` as [described here](https://pytorch.org/docs/stable/distributed.html#initialization). The `rank` is the index of the process and `world_size` is the total number of processes. If you train a model using 4 GPUs then `world_size` is 4 and the `ranks` of the processes are 0, 1, 2, 3.
 
+You can get world_size and rank from slurm job file and slurm environment variables such as "SLURM_PROCID". 
+world_size    = int(os.environ["WORLD_SIZE"])
+rank          = int(os.environ["SLURM_PROCID"])
+
 Step 2:
 
 For the single-GPU training:
